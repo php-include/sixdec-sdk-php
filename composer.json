@@ -1,0 +1,17 @@
+{
+	"name": "sixdec/sixdec-sdk-php",
+	"description": "sixdec sixdec-sdk-php",
+	"type": "library",
+	"license": "Apache License 2.0",
+	"authors": [
+		{
+			"name": "sixdec",
+			"homepage": "https://www.sixdec.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"sixdec\\SDK\\":"src"
+		}
+	}
+}
