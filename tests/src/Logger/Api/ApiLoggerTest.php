@@ -10,9 +10,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace sixdec\SDK\Logger\Api;
+namespace Sixdec\SDK\Logger\Api;
 
-use sixdec\SDK\EellyClient;
+use Sixdec\SDK\SixdecClient;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -37,7 +37,7 @@ class ApiLoggerTest extends TestCase
             'urlAccessToken'          => 'http://api.eelly.dev/oauth/authorizationServer/accessToken',
             'urlResourceOwnerDetails' => 'http://api.eelly.dev',
         ];
-        EellyClient::init($options);
+        SixdecClient::init($options);
         $this->logger = new ApiLogger();
     }
 

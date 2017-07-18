@@ -10,14 +10,14 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace sixdec\SDK\Test;
+namespace Sixdec\SDK\Test;
 
-use sixdec\SDK\EellyClient;
-use sixdec\SDK\Member\Service\Index\DTO\TimeDTO;
+use Sixdec\SDK\SixdecClient;
+use Sixdec\SDK\Member\Service\Index\DTO\TimeDTO;
 use League\OAuth2\Client\Token\AccessToken;
 use PHPUnit\Framework\TestCase;
 
-class EellyClientTest extends TestCase
+class SixdecClientTest extends TestCase
 {
     /**
      * @var string
@@ -25,7 +25,7 @@ class EellyClientTest extends TestCase
     private $testFile;
 
     /**
-     * @var EellyClient
+     * @var SixdecClient
      */
     private $eellyClient;
 
@@ -40,12 +40,12 @@ class EellyClientTest extends TestCase
             'urlAccessToken'          => 'http://api.eelly.dev/oauth/authorizationServer/accessToken',
             'urlResourceOwnerDetails' => 'http://api.eelly.dev',
         ];
-        $this->eellyClient = EellyClient::init($options);
+        $this->eellyClient = SixdecClient::init($options);
     }
 
     public function testInit(): void
     {
-        $this->assertInstanceOf(EellyClient::class, $this->eellyClient);
+        $this->assertInstanceOf(SixdecClient::class, $this->eellyClient);
     }
 
     public function testGetAccessToken(): void
@@ -56,9 +56,9 @@ class EellyClientTest extends TestCase
 
     public function testRequest(): void
     {
-        $return = EellyClient::request('member/index', 'cacheTime', 'mytest');
+        $return = SixdecClient::request('member/index', 'cacheTime', 'mytest');
         $this->assertInstanceOf(TimeDTO::class, $return);
         $this->eellyClient->setTraceId('5944e409b481de6f9472b0b5');
-        $return = EellyClient::request('member/index', 'cacheTime', 'mytest');
+        $return = SixdecClient::request('member/index', 'cacheTime', 'mytest');
     }
 }

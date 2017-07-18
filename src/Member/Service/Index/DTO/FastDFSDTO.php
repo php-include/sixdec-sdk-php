@@ -10,9 +10,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace sixdec\SDK\Member\Service\Index\DTO;
+namespace Sixdec\SDK\Member\Service\Index\DTO;
 
-use sixdec\SDK\AbstractDTO;
+use Sixdec\SDK\AbstractDTO;
 
 class FastDFSDTO extends AbstractDTO
 {

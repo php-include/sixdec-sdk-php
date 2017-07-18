@@ -10,7 +10,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace sixdec\SDK;
+namespace Sixdec\SDK;
 
 /**
  * @author hehui<hehui@eelly.net>

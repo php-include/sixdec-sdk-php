@@ -10,13 +10,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace sixdec\SDK;
+namespace Sixdec\SDK;
 
 use Eelly\OAuth2\Client\Provider\EellyProvider;
 use GuzzleHttp\Psr7\MultipartStream;
 use Psr\Http\Message\UploadedFileInterface;
 
-class EellyClient
+class SixdecClient
 {
     private const URI = [
         'logger' => 'http://api.eelly.dev',
@@ -37,7 +37,7 @@ class EellyClient
     private $provider;
 
     /**
-     * @var EellyClient
+     * @var SixdecClient
      */
     private static $self;
 

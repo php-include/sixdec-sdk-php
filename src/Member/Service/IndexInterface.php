@@ -10,10 +10,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace sixdec\SDK\Member\Service;
+namespace Sixdec\SDK\Member\Service;
 
-use sixdec\SDK\Member\Service\Index\DTO\FastDFSDTO;
-use sixdec\SDK\Member\Service\Index\DTO\TimeDTO;
+use Sixdec\SDK\Member\Service\Index\DTO\FastDFSDTO;
+use Sixdec\SDK\Member\Service\Index\DTO\TimeDTO;
 use Psr\Http\Message\UploadedFileInterface;
 
 interface IndexInterface

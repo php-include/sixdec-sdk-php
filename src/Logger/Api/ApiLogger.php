@@ -10,10 +10,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace sixdec\SDK\Logger\Api;
+namespace Sixdec\SDK\Logger\Api;
 
-use sixdec\SDK\EellyClient;
-use sixdec\SDK\Logger\Service\ApiLoggerInterface;
+use Sixdec\SDK\SixdecClient;
+use Sixdec\SDK\Logger\Service\ApiLoggerInterface;
 
 /**
  * @author hehui<hehui@eelly.net>
@@ -27,6 +27,6 @@ class ApiLogger implements ApiLoggerInterface
      */
     public function log(string $traceId, array $request = [], array $response = [], array $extras = []): void
     {
-        EellyClient::request('logger/apiLogger', __FUNCTION__, $traceId, $request, $response, $extras);
+        SixdecClient::request('logger/apiLogger', __FUNCTION__, $traceId, $request, $response, $extras);
     }
 }

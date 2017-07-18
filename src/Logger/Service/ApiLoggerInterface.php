@@ -10,7 +10,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace sixdec\SDK\Logger\Service;
+namespace Sixdec\SDK\Logger\Service;
 
 /**
  * @author hehui<hehui@eelly.net>
